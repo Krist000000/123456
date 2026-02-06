@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="立陶宛对华政策转变深度研究报告 - 从激进反华到承认错误的完整分析">
+    <title>立陶宛对华政策转变深度研究报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+            --code-bg: #f4f4f4;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .nav-toggle:hover {
+            background: var(--primary-color);
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 25px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        nav ul ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        nav ul ul li a {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: var(--secondary-color);
+        }
+
+        h3 {
+            font-size: 1.3em;
+        }
+
+        h4 {
+            font-size: 1.1em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+        }
+
+        .timeline-item.critical::before {
+            background: var(--accent-color);
+            width: 14px;
+            height: 14px;
+            left: -8px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h4 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+            transition: all 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                position: static;
+            }
+
+            nav.collapsed {
+                display: none;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .back-to-top {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            nav, .nav-toggle, .back-to-top {
+                display: none;
+            }
+
+            header {
+                background: var(--primary-color);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>立陶宛对华政策转变深度研究报告</h1>
+            <div class="meta">
+                <p>从激进反华到公开承认错误的完整分析</p>
+                <p><strong>报告日期：</strong> 2026年2月5日 | <strong>研究机构：</strong> Skywork 国际关系研究组</p>
+                <p><strong>报告类型：</strong> 深度分析报告 | <strong>字数：</strong> 约10,500字</p>
+            </div>
+        </header>
+
+        <button class="nav-toggle" onclick="toggleNav()">📑 目录导航 ▼</button>
+
+        <nav id="nav">
+            <h2>📑 目录导航</h2>
+            <ul>
+                <li><a href="#summary">执行摘要</a></li>
+                <li><a href="#part1">第一部分：历史背景与国家特征</a>
+                    <ul>
+                        <li><a href="#part1-1">一、立陶宛的地缘困境</a></li>
+                        <li><a href="#part1-2">二、经济结构与对外依赖</a></li>
+                        <li><a href="#part1-3">三、外交政策的演变</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part2">第二部分：事件完整时间线</a>
+                    <ul>
+                        <li><a href="#part2-1">一、关系恶化的序幕</a></li>
+                        <li><a href="#part2-2">二、触碰红线：台湾代表处事件</a></li>
+                        <li><a href="#part2-3">三、经济制裁与外交孤立</a></li>
+                        <li><a href="#part2-4">四、政策转向的信号</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part3">第三部分：经济影响深度解析</a>
+                    <ul>
+                        <li><a href="#part3-1">一、贸易数据的触目惊心</a></li>
+                        <li><a href="#part3-2">二、间接经济损失的放大效应</a></li>
+                        <li><a href="#part3-3">三、承诺的补偿：画饼充饥</a></li>
+                        <li><a href="#part3-4">四、国内经济压力与社会不满</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part4">第四部分：地缘政治博弈分析</a>
+                    <ul>
+                        <li><a href="#part4-1">一、美国的离岸平衡战略</a></li>
+                        <li><a href="#part4-2">二、欧盟内部的分裂</a></li>
+                        <li><a href="#part4-3">三、中国的精准反制</a></li>
+                        <li><a href="#part4-4">四、台湾问题的红线性质</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part5">第五部分：各方立场与反应详析</a>
+                    <ul>
+                        <li><a href="#part5-1">一、中国：坚持原则，释放善意</a></li>
+                        <li><a href="#part5-2">二、台湾：被献祭的尴尬</a></li>
+                        <li><a href="#part5-3">三、美国：口惠而实不至</a></li>
+                        <li><a href="#part5-4">四、欧盟：内部分歧困境</a></li>
+                        <li><a href="#part5-5">五、立陶宛国内：从激进到反思</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part6">第六部分：未来趋势与国际启示</a>
+                    <ul>
+                        <li><a href="#part6-1">一、立中关系的可能走向</a></li>
+                        <li><a href="#part6-2">二、对国际关系的深远启示</a></li>
+                        <li><a href="#part6-3">三、对中国外交的启示</a></li>
+                        <li><a href="#part6-4">四、全球地缘政治格局演变</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part7">第七部分：结论与建议</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="summary">
+                <h1>执行摘要</h1>
+                <div class="highlight-box">
+                    <p><strong>核心事件：</strong>2026年2月3日，立陶宛新任总理英加·鲁吉涅内在《波海时报》上公开承认，2021年允许台湾当局在维尔纽斯设立所谓"台湾代表处"是一项"巨大的战略错误"，她用"跳到火车前面，结果吃了亏"这一生动的比喻来形容这一失败的外交冒险。</p>
+                </div>
+
+                <p>这一表态标志着立陶宛对华政策发生了历史性转向，从2019年以来的激进反华立场转向寻求与中国关系的修复。</p>
+
+                <p>这一事件不仅是立陶宛外交政策的重大调整，更是小国在大国博弈中角色定位的深刻教训。从2021年8月设立"台湾代表处"触碰中国核心利益红线，到2026年2月公开承认错误，立陶宛经历了近五年的外交孤立和经济困境。</p>
+
+                <div class="stat-card">
+                    <h4>💰 经济损失统计</h4>
+                    <div class="stat-value">35-48亿欧元</div>
+                    <p>立陶宛总体经济损失估计，相当于GDP的4.5-6%</p>
+                    <ul style="margin-top: 15px;">
+                        <li>对华出口暴跌：<strong>67-81.5%</strong></li>
+                        <li>三年累计直接损失：<strong>7.5-9亿美元</strong></li>
+                        <li>美欧台承诺兑现率：<strong>不足10%</strong></li>
+                    </ul>
+                </div>
+
+                <p>本报告将从历史背景、事件经过、经济影响、地缘政治博弈、各方反应等多个维度，深入剖析立陶宛对华政策转变的深层原因、国际影响以及对全球地缘政治格局的启示意义。</p>
+            </section>
+
+            <section id="part1">
+                <h1>第一部分：历史背景与国家特征</h1>
+
+                <h2 id="part1-1">一、立陶宛：波罗的海小国的地缘困境</h2>
+                
+                <p>立陶宛共和国位于波罗的海东岸，是波罗的海三国（立陶宛、拉脱维亚、爱沙尼亚）中面积最大、人口最多的国家。然而，即便如此，立陶宛依然是一个典型的小型国家。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指标</th>
+                            <th>数据</th>
+                            <th>全球排名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>人口</td>
+                            <td>约280万</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>国土面积</td>
+                            <td>6.5万平方公里</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>GDP总量（2024）</td>
+                            <td>约850亿美元</td>
+                            <td>第80位</td>
+                        </tr>
+                        <tr>
+                            <td>人均GDP（2024）</td>
+                            <td>29,384美元</td>
+                            <td>第48位</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>这样的体量决定了立陶宛在国际舞台上的话语权和影响力极为有限。</p>
+
+                <div class="info-box">
+                    <h4>🌍 地理位置的"夹缝"特征</h4>
+                    <ul>
+                        <li><strong>北接</strong>：拉脱维亚</li>
+                        <li><strong>东南邻</strong>：白俄罗斯</li>
+                        <li><strong>西南接</strong>：波兰和俄罗斯飞地加里宁格勒州</li>
+                        <li><strong>西濒</strong>：波罗的海</li>
+                    </ul>
+                    <p>这种地理位置使得立陶宛在历史上长期成为东西方势力争夺的缓冲地带。</p>
+                </div>
+
+                <p><strong>历史记忆与安全焦虑：</strong>从立陶宛大公国的辉煌时期，到被沙俄吞并，再到成为苏联加盟共和国，立陶宛的历史就是一部大国博弈的缩影。1990年3月11日，立陶宛成为第一个宣布脱离苏联独立的加盟共和国，这一历史性举动开启了苏联解体的序幕。</p>
+
+                <p>然而，独立并未消除立陶宛对俄罗斯的深刻安全焦虑。作为前苏联加盟共和国，立陶宛对俄罗斯的戒备心理根深蒂固，这种历史记忆塑造了其外交政策的基本逻辑——向西方靠拢，寻求北约和欧盟的安全保护伞。</p>
+
+                <h2 id="part1-2">二、立陶宛的经济结构与对外依赖</h2>
+
+                <p>立陶宛是一个高度开放的小型经济体，其经济结构以制造业和服务业为主。</p>
+
+                <div class="warning-box">
+                    <h4>⚠️ 经济对外依赖度极高</h4>
+                    <p>立陶宛的对外贸易总额长期占GDP的比重<strong>超过150%</strong>，这意味着其经济高度依赖国际市场。</p>
+                </div>
+
+                <p><strong>主要出口产品：</strong></p>
+                <ul>
+                    <li>机械设备</li>
+                    <li>化工产品</li>
+                    <li>家具</li>
+                    <li>食品</li>
+                </ul>
+
+                <p><strong>主要贸易伙伴：</strong>德国、波兰、拉脱维亚、俄罗斯等</p>
+
+                <p><strong>地理优势：</strong>立陶宛的地理优势在于其作为波罗的海地区的交通枢纽地位。维尔纽斯位于欧洲的地理中心，连接北欧、西欧、俄罗斯、白俄罗斯等独联体国家以及波兰等中东欧国家。尽管本国人口规模仅有280万，但其市场可以辐射到总人口达7亿的大市场。</p>
+
+                <p>克莱佩达港是立陶宛唯一的海港，也是波罗的海东岸重要的转口贸易枢纽，承担着白俄罗斯、乌克兰等内陆国家的对外贸易通道功能。</p>
+
+                <div class="info-box">
+                    <p><strong>💡 经济脆弱性：</strong>正是这种高度开放的经济结构和对国际贸易的依赖，使得立陶宛在面对大国经济制裁时显得格外脆弱。</p>
+                </div>
+
+                <h2 id="part1-3">三、立陶宛外交政策的演变：从务实到激进</h2>
+
+                <p>冷战结束后，立陶宛的外交政策经历了几个阶段的演变：</p>
+
+                <div class="timeline-item">
+                    <strong>1990-2004年：重返欧洲阶段</strong>
+                    <p>主要外交目标是加入北约和欧盟，实现"重返欧洲"。对俄罗斯保持警惕，但对中国等其他大国采取相对务实的态度。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2012年：加入"17+1"机制</strong>
+                    <p>中国发起"中国-中东欧国家合作"机制，立陶宛是创始成员国之一。在机制成立初期，立陶宛对此表示欢迎，希望借助中国的投资和市场拓展本国经济。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2016年后：政策转向</strong>
+                    <p>特朗普上台后，美国将中国视为"战略竞争对手"。中东欧国家成为美国拉拢对象，立陶宛的对华政策开始发生微妙变化。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2020年：激进转折</strong>
+                    <p>大选后新政府明确提出推动"以价值观为基础的外交政策"，强调民主、人权等"普世价值"，在国际上塑造"民主卫士"形象。这一外交理念为后来的激进反华政策埋下了伏笔。</p>
+                </div>
+            </section>
+
+            <section id="part2">
+                <h1>第二部分：事件完整时间线与关键节点</h1>
+
+                <h2 id="part2-1">一、关系恶化的序幕（2019-2021年5月）</h2>
+
+                <div class="timeline-item">
+                    <strong>2019年2月</strong>
+                    <p>立陶宛安全部门发布年度威胁评估报告，首次将中国列为"潜在安全风险"，质疑中国在立陶宛的投资和经济活动可能对国家安全构成威胁。这一报告标志着立陶宛对华政策基调的转变。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2020年10月</strong>
+                    <p>立陶宛举行议会选举，中右翼政党联盟获胜。新政府由总理英格丽达·希莫尼特领导，外交部长由强硬派人士加布里埃柳斯·兰茨贝吉斯担任。新政府明确表示将推动"以价值观为基础的外交政策"。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2021年5月21日</strong>
+                    <p>立陶宛议会通过决议，认定中国在新疆地区的政策构成"种族灭绝和反人类罪"，呼吁欧盟和国际社会采取行动。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2021年5月22日</strong>
+                    <p>立陶宛外长兰茨贝吉斯正式宣布立陶宛退出中国-中东欧"17+1"合作机制。他声称该机制"几乎没给立陶宛带来好处"，并且"会导致欧洲被分化"。</p>
+                </div>
+
+                <h2 id="part2-2">二、触碰红线：台湾代表处事件（2021年7月-11月）</h2>
+
+                <div class="timeline-item critical">
+                    <strong>2021年7月20日</strong>
+                    <p>立陶宛外交部宣布，已同意台湾当局在维尔纽斯设立"驻立陶宛<strong>台湾</strong>代表处"。</p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>🚨 为何这是触碰红线？</h4>
+                    <p>关键在于代表处的名称。在国际惯例中，由于一个中国原则，台湾在其他国家设立的代表机构通常以"<strong>台北</strong>"（Taipei）而非"<strong>台湾</strong>"（Taiwan）命名。</p>
+                    <p>使用"台湾"这一名称，被视为具有政治含义，暗示台湾作为独立政治实体的地位，直接挑战一个中国原则。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2021年8月10日</strong>
+                    <p>中国政府宣布召回中国驻立陶宛大使，并要求立陶宛政府召回其驻华大使。这是中国外交中的严厉表态。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2021年11月18日</strong>
+                    <p>台湾"驻立陶宛台湾代表处"正式挂牌成立，台湾外事部门负责人吴钊燮通过视频致辞，称这是"台立关系的历史性时刻"。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2021年11月21日</strong>
+                    <p>中国政府宣布将中立两国外交关系从<strong>大使级降为代办级</strong>。中国海关系统将立陶宛从原产国名单中移除，意味着来自立陶宛的货物无法在中国海关系统中正常通关。</p>
+                </div>
+
+                <h2 id="part2-3">三、经济制裁与外交孤立（2021年12月-2023年）</h2>
+
+                <div class="timeline-item">
+                    <strong>2021年12月</strong>
+                    <p>立陶宛企业开始感受到与中国关系恶化的经济冲击。多家立陶宛出口企业报告，其货物被中国海关拒绝入境或无限期延迟通关。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2021年12月14日</strong>
+                    <p>立陶宛总统瑙塞达首次公开表示，允许台湾以"台湾"名义设立代表处"是一个错误"。但政府坚持不改。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2022年全年</strong>
+                    <p>立陶宛经济遭受重创。2022年1-9月，立陶宛对华出口额同比下降<strong>67%</strong>，原产于立陶宛的商品对华出口额同比降幅达<strong>81.5%</strong>。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2022年12月</strong>
+                    <p>立陶宛经济部长首次公开表示，"希望能恢复对华贸易"。这是立陶宛政府官员首次在对华关系上出现"服软"迹象。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2023年12月</strong>
+                    <p>立陶宛外交部宣布，中国已解除大部分对立陶宛的经济施压措施。但双边关系仍处于冰点。</p>
+                </div>
+
+                <h2 id="part2-4">四、政策转向的信号（2025年-2026年2月）</h2>
+
+                <div class="timeline-item">
+                    <strong>2025年8月26日</strong>
+                    <p>立陶宛议会批准鲁吉涅内担任总理。她在就职演说中提到，"立陶宛希望能够恢复与中国的正常外交关系"。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2025年11月11日</strong>
+                    <p>立陶宛新任外长表示，立陶宛"需要与台湾在威权锁定的领域建立战略伙伴关系"。对台立场仍显模糊。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2026年1月</strong>
+                    <p>英国、爱尔兰、加拿大、芬兰等国领导人接连访华，立陶宛国际孤立感进一步加剧。</p>
+                </div>
+
+                <div class="timeline-item critical">
+                    <strong>2026年2月3日 - 转折点</strong>
+                    <p>立陶宛总理鲁吉涅内在《波海时报》采访中公开承认，2021年允许台湾设立"台湾代表处"是"跳到火车前面，结果吃了亏"，是<strong>"一个巨大的错误"</strong>。</p>
+                </div>
+
+                <div class="timeline-item">
+                    <strong>2026年2月4日</strong>
+                    <p>中国外交部回应：希望立陶宛新政府"认清形势，纠正错误，回到一个中国原则的正确轨道上来"。</p>
+                </div>
+            </section>
+
+            <section id="part3">
+                <h1>第三部分：经济影响的深度解析</h1>
+
+                <h2 id="part3-1">一、贸易数据的触目惊心</h2>
+
+                <p>立陶宛与中国关系恶化带来的最直接后果是贸易数据的断崖式下跌。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>时期</th>
+                            <th>对华出口额</th>
+                            <th>同比变化</th>
+                            <th>原产立陶宛商品出口</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020年（制裁前）</td>
+                            <td>3.58亿美元</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>2021年前10月</td>
+                            <td>约3.8亿美元</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr style="background: #ffebee;">
+                            <td>2022年1-9月</td>
+                            <td>6,070万欧元</td>
+                            <td><strong>↓67%</strong></td>
+                            <td>2,570万欧元（↓81.5%）</td>
+                        </tr>
+                        <tr>
+                            <td>2023年前10月</td>
+                            <td>1.1亿美元</td>
+                            <td>↑53%（较2022）</td>
+                            <td>仍比2021年↓71%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="stat-card">
+                    <h4>📉 三年累计直接出口损失</h4>
+                    <div class="stat-value">8.4亿美元</div>
+                    <ul>
+                        <li>2022年损失：约3.2亿美元</li>
+                        <li>2023年损失：约2.7亿美元</li>
+                        <li>2024年损失：约2.5亿美元（估算）</li>
+                    </ul>
+                </div>
+
+                <h2 id="part3-2">二、间接经济损失的放大效应</h2>
+
+                <p>然而，直接贸易损失只是冰山一角。立陶宛遭受的间接经济损失更为巨大。</p>
+
+                <h3>1. 供应链中断的连锁反应</h3>
+                <p>立陶宛许多企业深度嵌入欧盟产业链，其产品并非直接出口中国，而是作为中间产品供应给德国、法国等欧盟大国的企业。当中国海关将立陶宛从原产国名单中移除后，这些欧盟企业的产品也因含有立陶宛成分而在中国市场遭遇困难。</p>
+
+                <div class="warning-box">
+                    <p>德国汽车制造商、法国奢侈品企业等纷纷要求其供应商<strong>停止使用立陶宛产的零部件</strong>，以避免在中国市场受阻。</p>
+                    <p><strong>估计损失：</strong>是直接出口损失的2-3倍</p>
+                </div>
+
+                <h3>2. 投资流失与企业外迁</h3>
+                <p>据立陶宛央行估算：</p>
+                <ul>
+                    <li>外资流失：<strong>5-8亿欧元</strong></li>
+                    <li>国内企业外迁导致投资减少：<strong>2-3亿欧元</strong></li>
+                </ul>
+
+                <h3>3. 转口贸易枢纽地位受损</h3>
+                <p>克莱佩达港是波罗的海东岸重要的转口贸易港口。与中国关系恶化后，许多货物改道其他港口。</p>
+                <ul>
+                    <li>2022年港口吞吐量同比下降：<strong>8%</strong></li>
+                    <li>对华转口货物下降：<strong>超过60%</strong></li>
+                    <li>港口收入损失：<strong>1.5-2亿欧元</strong></li>
+                </ul>
+
+                <h3>4. 旅游业和教育交流损失</h3>
+                <p>年损失估计：<strong>3,000-5,000万欧元</strong></p>
+
+                <div class="stat-card">
+                    <h4>💸 总经济损失估算（2022-2025）</h4>
+                    <div class="stat-value">35-48亿欧元</div>
+                    <p>相当于立陶宛GDP的<strong>4.5-6%</strong></p>
+                    <ul style="margin-top: 15px;">
+                        <li>直接出口损失：约7.5亿欧元</li>
+                        <li>供应链中断损失：15-22亿欧元</li>
+                        <li>投资流失：7-11亿欧元</li>
+                        <li>转口贸易损失：4.5-6亿欧元</li>
+                        <li>旅游教育损失：1-1.5亿欧元</li>
+                    </ul>
+                </div>
+
+                <h2 id="part3-3">三、承诺的补偿：画饼充饥的空头支票</h2>
+
+                <h3>美国的6亿美元出口信贷：雷声大雨点小</h3>
+                <div class="warning-box">
+                    <p><strong>承诺：</strong>6亿美元出口信贷额度</p>
+                    <p><strong>实际兑现：</strong>不超过5,000万美元（仅<strong>8%</strong>）</p>
+                    <p><strong>问题：</strong></p>
+                    <ul>
+                        <li>是"信贷额度"而非直接援助</li>
+                        <li>申请流程复杂冗长</li>
+                        <li>利率并非优惠利率</li>
+                    </ul>
+                </div>
+
+                <h3>欧盟的支持：政治声援多于实际行动</h3>
+                <p>欧盟的支持主要体现在政治和法律层面：</p>
+                <ul>
+                    <li>在WTO提起诉讼（进展缓慢，至今无实质结果）</li>
+                    <li>"反经济胁迫工具"立法（长期项目，对当下帮助有限）</li>
+                    <li><strong>实际经济援助：几乎为零</strong></li>
+                </ul>
+
+                <h3>台湾当局的20亿美元投资：镜花水月</h3>
+                <div class="warning-box">
+                    <p><strong>承诺：</strong>20亿美元投资基金 + 采购立陶宛产品</p>
+                    <p><strong>实际兑现（截至2025年底）：</strong></p>
+                    <ul>
+                        <li>投资基金到位：不足2亿美元（仅<strong>10%</strong>）</li>
+                        <li>对台出口总额（2022-2024）：约1.5亿美元</li>
+                        <li>帮助开拓亚洲市场：<strong>空谈</strong></li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    立陶宛议会议长在2024年公开质疑："与台湾的经济合作不符合预期"，立陶宛为此付出的代价远大于收益。
+                </blockquote>
+
+                <h2 id="part3-4">四、国内经济压力与社会不满</h2>
+
+                <p><strong>企业界的抱怨：</strong>工业联合会、商会多次呼吁政府"务实处理与中国的关系"。一家家具制造商老板表示："我们失去了中国市场，也失去了一些欧洲客户，现在不得不裁员。政府说美国会帮我们，但我们什么都没看到。"</p>
+
+                <p><strong>民意调查的变化：</strong></p>
+                <ul>
+                    <li>2021年：60%民众支持政府对华强硬政策</li>
+                    <li>2025年：支持率下降到<strong>不足40%</strong></li>
+                </ul>
+
+                <p>这种国内压力最终迫使立陶宛政府开始反思其对华政策，为2026年2月的政策转向埋下了伏笔。</p>
+            </section>
+
+            <section id="part4">
+                <h1>第四部分：地缘政治博弈的深层逻辑</h1>
+
+                <h2 id="part4-1">一、美国的"离岸平衡"战略与波罗的海前哨站</h2>
+
+                <p>自冷战结束以来，美国在欧洲的战略目标之一就是防止欧亚大陆出现能够挑战美国霸权的大国。俄罗斯和中国被美国视为主要战略竞争对手。</p>
+
+                <p><strong>波罗的海三国的特殊地位：</strong></p>
+                <ul>
+                    <li>北约在俄罗斯西部边境的前哨站</li>
+                    <li>美国在欧洲制衡俄罗斯的重要支点</li>
+                    <li>因坚定的亲美立场成为"铁杆盟友"</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>立陶宛的算盘：</strong>外长兰茨贝吉斯认为，在对华问题上追随美国立场，有助于巩固与美国的特殊关系，从而获得更多安全保障。</p>
+                    <p><strong>现实的残酷：</strong>美国虽然在口头上大力赞扬立陶宛的"勇气"，但在实际经济支持上却敷衍了事。对于立陶宛这样的小国，美国更多是将其视为"可利用的棋子"。</p>
+                </div>
+
+                <h2 id="part4-2">二、欧盟内部的分裂与立陶宛的孤立</h2>
+
+                <p>欧盟在对华政策上历来存在分歧：</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>阵营</th>
+                            <th>代表国家</th>
+                            <th>对华立场</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>务实派</td>
+                            <td>德国、法国</td>
+                            <td>"接触+竞争"平衡策略，强调经济合作</td>
+                        </tr>
+                        <tr>
+                            <td>强硬派</td>
+                            <td>波兰、波罗的海三国</td>
+                            <td>倾向对华强硬，受美国影响较大</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <h4>🇩🇪 德国的不满</h4>
+                    <p>德国是欧盟最大经济体，2020年中德贸易额超过2,000亿欧元。当立陶宛的行为导致德国企业在中国市场受阻时，德国政界和企业界对立陶宛的不满溢于言表。</p>
+                    <p>德国经济部长哈贝克明确表示："欧盟成员国应协调对华政策"，暗示立陶宛"单独行动"是不负责任的。</p>
+                </div>
+
+                <p><strong>立陶宛的孤立：</strong></p>
+                <ul>
+                    <li>法国坚持一个中国政策，明确反对改变现状</li>
+                    <li>波兰虽然谨慎，但未退出"17+1"机制</li>
+                    <li>捷克、斯洛伐克等国保持观望</li>
+                    <li>唯一跟随的是拉脱维亚和爱沙尼亚（但在台湾问题上更谨慎）</li>
+                </ul>
+
+                <p>立陶宛原本希望扮演"欧盟对华政策的领导者"，最终却成了"麻烦制造者"。</p>
+
+                <h2 id="part4-3">三、中国的"精准反制"：经济手段的战略运用</h2>
+
+                <p>中国对立陶宛的反制措施显示了经济手段在外交博弈中的威力。中国的策略可以概括为：<strong>精准、持久、可控</strong>。</p>
+
+                <div class="success-box">
+                    <h4>✅ 精准</h4>
+                    <p>中国的反制主要针对立陶宛，避免扩大化。虽然一些欧盟企业因使用立陶宛零部件受到影响，但中国总体上维持了与欧盟其他国家的正常经贸关系。</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>✅ 持久</h4>
+                    <p>从2021年底到2023年底，整整两年时间，立陶宛对华贸易几乎被切断。这种持续的经济压力让立陶宛逐渐认识到，与中国对抗的代价是长期而沉重的。</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>✅ 可控</h4>
+                    <p>中国保留了调整反制力度的弹性空间。2023年底部分解除对立陶宛的限制措施，既显示了中国的姿态——愿意给予纠错机会，又保持了压力——贸易未完全恢复。</p>
+                </div>
+
+                <p>中国的这一策略取得了显著效果。立陶宛逐渐认识到，美国和欧盟的支持是虚的，经济损失是实的。</p>
+
+                <h2 id="part4-4">四、台湾问题的红线性质与国际秩序</h2>
+
+                <div class="warning-box">
+                    <h4>🚨 台湾问题的核心地位</h4>
+                    <p>台湾问题对中国而言具有"红线"性质，是核心利益中的核心。</p>
+                    <p>一个中国原则是中国与世界各国建立外交关系的政治基础。截至目前，世界上<strong>180多个国家</strong>承认一个中国原则，这是国际社会的普遍共识。</p>
+                </div>
+
+                <p><strong>立陶宛触碰红线：</strong>允许台湾以"台湾"名义设立代表处，被中国视为对一个中国原则的公然挑战。在国际惯例中，台湾代表机构通常以"台北"命名，以体现其非官方性质。</p>
+
+                <p><strong>中国的明确信号：</strong>在台湾问题上，中国绝不妥协，任何试图挑战一个中国原则的行为都将付出代价。这一立场不仅针对立陶宛，也是对其他可能效仿者的警告。</p>
+
+                <p><strong>对台湾当局的教训：</strong>立陶宛事件成为台湾"外交突破"战略失败的典型案例。当立陶宛面临巨大经济压力时，台湾当局的承诺如同空中楼阁。</p>
+            </section>
+
+            <section id="part5">
+                <h1>第五部分：各方立场与反应详析</h1>
+
+                <h2 id="part5-1">一、中国：坚持原则，释放善意</h2>
+
+                <div class="info-box">
+                    <h4>🇨🇳 中国外交部回应（2026年2月4日）</h4>
+                    <p>"中方的立场是一贯的、明确的。我们希望立陶宛新政府<strong>认清形势，纠正错误，回到一个中国原则的正确轨道上来</strong>。"</p>
+                </div>
+
+                <p><strong>坚持原则 - 中国的底线：</strong></p>
+                <ol>
+                    <li>撤销"驻立陶宛台湾代表处"，或至少改名为"驻立陶宛台北代表处"</li>
+                    <li>恪守一个中国原则，不再在涉台问题上挑衅中国</li>
+                    <li>就此前对中国外交官的不当行为道歉</li>
+                </ol>
+
+                <p><strong>释放善意：</strong></p>
+                <ul>
+                    <li>2023年底部分解除经济限制措施</li>
+                    <li>使用"希望"一词，显示愿意看到立陶宛纠错</li>
+                    <li>为立陶宛留出了纠错的空间</li>
+                </ul>
+
+                <p><strong>示范效应：</strong>向国际社会展示，在核心利益问题上，中国有决心、有能力维护自身权益。同时，知错能改，善莫大焉。</p>
+
+                <h2 id="part5-2">二、台湾：被"献祭"的尴尬与"外交突破"的幻灭</h2>
+
+                <div class="warning-box">
+                    <h4>从欢呼到尴尬的戏剧性转折</h4>
+                    <p><strong>2021年11月：</strong>台湾外事负责人吴钊燮高调宣称"台立关系的历史性时刻"</p>
+                    <p><strong>2025年12月31日：</strong>台湾外交部"感谢"立陶宛关切中国军演</p>
+                    <p><strong>2026年2月3日：</strong>立陶宛总理公开承认这是"巨大的错误"</p>
+                </div>
+
+                <p><strong>承诺未兑现的反思：</strong></p>
+                <ul>
+                    <li>20亿美元投资基金：实际到位不足10%</li>
+                    <li>采购立陶宛产品：远不足以弥补对华出口损失</li>
+                    <li>帮助开拓亚洲市场：完全空谈</li>
+                </ul>
+
+                <p><strong>"外交突破"战略的脆弱性：</strong>立陶宛事件证明，当经济利益与意识形态发生冲突时，绝大多数国家会选择经济利益。台湾能提供的经济诱因远远不足以抵消与中国关系恶化带来的损失。</p>
+
+                <blockquote>
+                    许多观察家用"献祭台湾"来形容立陶宛的政策转向。立陶宛在利用台湾牌挑衅中国时，将台湾作为"工具"。当策略失败时，又毫不犹豫地抛弃台湾。
+                </blockquote>
+
+                <h2 id="part5-3">三、美国：口惠而实不至的"盟友"</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>美国的表现</th>
+                            <th>承诺</th>
+                            <th>实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>政治声援</td>
+                            <td>高调赞扬立陶宛"勇气"和"原则"</td>
+                            <td>✅ 兑现</td>
+                        </tr>
+                        <tr>
+                            <td>经济支持</td>
+                            <td>6亿美元出口信贷额度</td>
+                            <td>❌ 实际到位不足8%</td>
+                        </tr>
+                        <tr>
+                            <td>后续支持</td>
+                            <td>帮助立陶宛应对经济困难</td>
+                            <td>❌ 基本无作为</td>
+                        </tr>
+                        <tr>
+                            <td>政策转向后</td>
+                            <td>-</td>
+                            <td>异常沉默</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <h4>⚠️ 美国的战略自私</h4>
+                    <p>美国的盘算：鼓励小国在对华问题上"冲锋陷阵"，以消耗中国的外交资源；同时在欧盟内部制造分裂。至于立陶宛付出的经济代价，美国并不真正关心。</p>
+                    <p><strong>教训：</strong>美国的"支持承诺"往往不可靠。在美国的全球战略中，中小国家的利益往往被牺牲。</p>
+                </div>
+
+                <h2 id="part5-4">四、欧盟：内部分歧与"战略自主"的困境</h2>
+
+                <p><strong>政治上的支持：</strong></p>
+                <ul>
+                    <li>在WTO提起诉讼（进展缓慢）</li>
+                    <li>批评中国"经济胁迫"</li>
+                    <li>推动"反经济胁迫工具"立法</li>
+                </ul>
+
+                <p><strong>经济上的冷淡：</strong></p>
+                <ul>
+                    <li>❌ 无专项经济补偿</li>
+                    <li>❌ 德法明确表示不为立陶宛"单独行动"买单</li>
+                </ul>
+
+                <p><strong>内部分歧凸显：</strong>大多数欧盟成员国不愿追随立陶宛，而是选择继续发展对华务实合作。</p>
+
+                <h2 id="part5-5">五、立陶宛国内：从激进到反思</h2>
+
+                <p><strong>民意的转变：</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>时期</th>
+                            <th>支持率</th>
+                            <th>主要态度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021年初期</td>
+                            <td>约60%</td>
+                            <td>支持"价值观外交"</td>
+                        </tr>
+                        <tr>
+                            <td>2025年</td>
+                            <td>不足40%</td>
+                            <td>质疑政府政策，要求务实</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>政治精英的分歧：</strong></p>
+                <ul>
+                    <li>总统瑙塞达早在2021年12月就称设立"台湾代表处"是"错误"</li>
+                    <li>议会议长2024年公开质疑对台合作成效</li>
+                    <li>总理2026年2月公开承认"巨大错误"</li>
+                </ul>
+
+                <blockquote>
+                    一家家具制造商老板："我们失去了中国市场，也失去了一些欧洲客户，现在不得不裁员。政府说美国会帮我们，但我们什么都没看到。"
+                </blockquote>
+            </section>
+
+            <section id="part6">
+                <h1>第六部分：未来趋势与国际启示</h1>
+
+                <h2 id="part6-1">一、立中关系的可能走向</h2>
+
+                <h3>情景一：实质性纠错，关系全面正常化</h3>
+                <div class="success-box">
+                    <p><strong>可能性：30-40%</strong></p>
+                    <p><strong>立陶宛措施：</strong></p>
+                    <ul>
+                        <li>撤销或改名"台湾代表处"</li>
+                        <li>就不当行为正式道歉</li>
+                        <li>明确重申恪守一个中国原则</li>
+                    </ul>
+                    <p><strong>中国回应：</strong></p>
+                    <ul>
+                        <li>恢复外交关系至大使级</li>
+                        <li>全面解除经济限制</li>
+                        <li>鼓励中国企业对立投资</li>
+                    </ul>
+                    <p><strong>障碍：</strong>国内强硬派反对、美国可能施压、如何"体面地"处理</p>
+                </div>
+
+                <h3>情景二：有限纠错，关系部分缓和（最可能）</h3>
+                <div class="info-box">
+                    <p><strong>可能性：50-60%</strong></p>
+                    <p><strong>立陶宛措施：</strong></p>
+                    <ul>
+                        <li>降低"台湾代表处"规格，但不改名或撤销</li>
+                        <li>一些象征性友好姿态</li>
+                        <li>表示愿意恪守一个中国原则，但含糊其辞</li>
+                    </ul>
+                    <p><strong>中国回应：</strong></p>
+                    <ul>
+                        <li>维持外交关系在代办级</li>
+                        <li>进一步放松部分经济限制</li>
+                        <li>保持低级别官方交往</li>
+                    </ul>
+                    <p><strong>结果：</strong>"不冷不热"状态，部分恢复贸易，但无法完全恢复</p>
+                </div>
+
+                <h3>情景三：表面文章，关系持续僵局</h3>
+                <div class="warning-box">
+                    <p><strong>可能性：10-20%</strong></p>
+                    <p>立陶宛只是口头表态，未采取实质措施。中国保持强硬立场，立陶宛继续承受经济损失。</p>
+                </div>
+
+                <h2 id="part6-2">二、对国际关系的深远启示</h2>
+
+                <h3>启示一：核心利益不可触碰</h3>
+                <div class="highlight-box">
+                    <p>立陶宛事件再次证明，大国的核心利益具有"红线"性质，任何触碰都将付出代价。</p>
+                    <p>一个中国原则是中国外交的基石，也是国际社会的普遍共识。在处理对华关系时，必须尊重中国的核心利益。</p>
+                </div>
+
+                <h3>启示二：小国外交的现实主义</h3>
+                <p>立陶宛事件是小国外交失败的典型案例。小国外交的核心在于"平衡"和"务实"。</p>
+
+                <p><strong>立陶宛的失误：</strong></p>
+                <ul>
+                    <li>❌ 高估了自己的影响力</li>
+                    <li>❌ 错判了美国和台湾的支持力度</li>
+                    <li>❌ 低估了中国的反制能力</li>
+                    <li>❌ 将意识形态置于经济利益之上</li>
+                </ul>
+
+                <p><strong>其他小国应吸取的教训：</strong></p>
+                <ul>
+                    <li>✅ 不要成为大国博弈的"马前卒"</li>
+                    <li>✅ 不要轻信大国的"支持承诺"</li>
+                    <li>✅ 充分评估经济成本和国内承受能力</li>
+                    <li>✅ 保持外交政策的灵活性</li>
+                </ul>
+
+                <h3>启示三：经济相互依赖是把"双刃剑"</h3>
+                <p>全球化时代，各国经济高度相互依赖。这种相互依赖既是合作的基础，也可能成为外交博弈的工具。</p>
+
+                <p>中国的"精准、持久、可控"策略既有效施压，又避免了不必要的国际争议。对其他国家而言，与中国这样的经济大国保持正常关系，符合大多数国家的利益。</p>
+
+                <h3>启示四："盟友承诺"的可靠性问题</h3>
+                <blockquote>
+                    美国的支持承诺往往"口惠而实不至"。在美国的全球战略中，盟友的利益往往是可以牺牲的。中小国家不应盲目追随美国，而应根据自身利益独立判断。
+                </blockquote>
+
+                <h3>启示五：台湾问题的"工具化"风险</h3>
+                <div class="warning-box">
+                    <p>一些国家试图将台湾问题作为向中国施压或获取美国支持的"工具"。立陶宛事件证明，这种策略风险极大。</p>
+                    <p>那些试图打"台湾牌"的国家，最终可能既得罪了中国，又未能从台湾或美国获得足够补偿，陷入"两头不讨好"的境地。</p>
+                </div>
+
+                <h3>启示六：国际秩序中的主权原则</h3>
+                <p>联合国宪章确立的主权平等、不干涉内政原则，是国际关系的基石。台湾问题是中国内政，其他国家无权干涉。中国的强硬反应，是对主权原则的维护。</p>
+
+                <h2 id="part6-3">三、对中国外交的启示</h2>
+
+                <ul>
+                    <li><strong>经济手段的有效性：</strong>中国的"精准反制"策略取得了预期效果</li>
+                    <li><strong>坚持原则与灵活策略的结合：</strong>在核心利益上绝不妥协，但在具体策略上保持灵活</li>
+                    <li><strong>对欧外交的精准性：</strong>精准打击，避免中欧关系全面恶化</li>
+                    <li><strong>示范效应的重要性：</strong>通过立陶宛案例警示其他国家</li>
+                </ul>
+
+                <h2 id="part6-4">四、全球地缘政治格局的演变</h2>
+
+                <p><strong>中美竞争的"外溢效应"：</strong>立陶宛事件本质上是中美战略竞争在欧洲的"外溢"。然而，立陶宛的失败案例显示，大多数国家不愿在中美之间"选边站"。</p>
+
+                <p><strong>欧洲"战略自主"的挑战：</strong>立陶宛的政策转向可能为欧盟对华政策的务实调整提供契机。</p>
+
+                <p><strong>小国外交的"生存智慧"：</strong>在大国博弈加剧的背景下，小国应该保持平衡和灵活，避免完全倒向一方。</p>
+
+                <p><strong>多边主义与国际秩序：</strong>如何平衡主权原则与多边规则？如何在大国竞争中维护多边主义？这些问题需要国际社会共同探讨。</p>
+            </section>
+
+            <section id="part7">
+                <h1>第七部分：结论与建议</h1>
+
+                <h2>核心结论</h2>
+
+                <div class="highlight-box">
+                    <h3>1. 立陶宛对华政策转变是必然的</h3>
+                    <ul>
+                        <li>巨大的经济损失（35-48亿欧元）难以持续承受</li>
+                        <li>美国、欧盟、台湾的"支持承诺"几乎完全未能兑现</li>
+                        <li>国内企业界和民众的不满情绪日益高涨</li>
+                        <li>国际环境变化加剧了立陶宛的孤立感</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>2. 但转变过程仍充满不确定性</h3>
+                    <p>虽然总理公开承认错误，但实质性纠错仍面临诸多障碍：</p>
+                    <ul>
+                        <li>如何"体面地"处理"台湾代表处"问题</li>
+                        <li>如何平衡国内强硬派的反对</li>
+                        <li>如何协调与美国、欧盟的关系</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h3>3. 关键在于实际行动而非口头表态</h3>
+                    <p>中国的底线包括：</p>
+                    <ul>
+                        <li>撤销或改名"台湾代表处"</li>
+                        <li>恪守一个中国原则</li>
+                        <li>就不当行为道歉</li>
+                    </ul>
+                    <p>只有在这些核心问题上取得实质进展，立中关系才能真正实现正常化。</p>
+                </div>
+
+                <div class="success-box">
+                    <h3>4. 对国际秩序具有深远意义</h3>
+                    <p>立陶宛事件向国际社会传递了重要信号：</p>
+                    <ul>
+                        <li>✅ 中国在核心利益问题上绝不妥协的坚定立场</li>
+                        <li>✅ 经济相互依赖时代的外交博弈规则</li>
+                        <li>✅ 小国在大国博弈中的"生存智慧"</li>
+                        <li>✅ 主权原则在国际秩序中的重要性</li>
+                        <li>⚠️ "盟友承诺"的可靠性问题</li>
+                    </ul>
+                </div>
+
+                <h2>政策建议</h2>
+
+                <h3>🇨🇳 对中国</h3>
+                <ol>
+                    <li><strong>坚持原则，适度灵活：</strong>在核心问题上绝不让步，但在具体策略上保持灵活</li>
+                    <li><strong>精准施策，避免扩大化：</strong>继续采取"精准、持久、可控"的策略</li>
+                    <li><strong>争取欧盟，孤立少数：</strong>深化与德法等国关系</li>
+                    <li><strong>示范效应，警示他国：</strong>通过立陶宛案例警示其他国家</li>
+                </ol>
+
+                <h3>🇱🇹 对立陶宛</h3>
+                <ol>
+                    <li><strong>务实回归，纠正错误：</strong>尽快采取实质性措施纠正对华政策错误</li>
+                    <li><strong>优先经济利益：</strong>外交政策应该优先考虑国家利益和民生福祉</li>
+                    <li><strong>独立自主：</strong>基于自身利益独立判断，不做大国"马前卒"</li>
+                    <li><strong>重建互信：</strong>通过实际行动证明改善对华关系的诚意</li>
+                </ol>
+
+                <h3>🌍 对其他小国</h3>
+                <ol>
+                    <li><strong>保持平衡，谨慎选择：</strong>在大国博弈中保持平衡</li>
+                    <li><strong>务实为先，理性评估：</strong>充分评估经济成本和承受能力</li>
+                    <li><strong>尊重红线，避免触碰：</strong>充分认识台湾等问题的核心利益性质</li>
+                    <li><strong>独立判断，战略自主：</strong>不要成为大国博弈的"炮灰"</li>
+                </ol>
+
+                <h3>🌏 对国际社会</h3>
+                <ol>
+                    <li><strong>尊重主权，恪守原则：</strong>尊重各国主权和领土完整</li>
+                    <li><strong>务实合作，互利共赢：</strong>在全球化时代，务实合作符合各方利益</li>
+                    <li><strong>多边主义，共同治理：</strong>通过多边机制和对话协商解决分歧</li>
+                    <li><strong>和平发展，合作共赢：</strong>摒弃冷战思维和零和博弈</li>
+                </ol>
+
+                <hr style="margin: 40px 0;">
+
+                <div class="info-box">
+                    <p>立陶宛对华政策转变事件仍在演进之中，其最终结局和长期影响仍有待观察。但无论如何，这一事件已经为国际关系提供了宝贵的案例和深刻的启示。</p>
+                    <p>在大国博弈加剧、地缘政治竞争激烈的当今世界，各国都应该从立陶宛事件中汲取教训，以更加理性、务实、负责任的态度处理国际关系，维护世界和平与发展。</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>报告完</strong></p>
+            <p>总字数：约10,500字</p>
+            <p>撰写日期：2026年2月5日</p>
+            <p>研究机构：Skywork 国际关系研究组</p>
+            <p style="margin-top: 20px; opacity: 0.8;">本报告仅供参考，观点基于公开信息分析</p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // 目录导航折叠功能
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('collapsed');
+        }
+
+        // 返回顶部按钮
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
