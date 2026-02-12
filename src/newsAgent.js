@@ -7,7 +7,7 @@ const parser = new XMLParser({ ignoreAttributes: false });
 
 const parseKeywords = () => {
   const args = process.argv.slice(2).filter(Boolean);
-  const raw = args.length > 0 ? args : (process.env.HOT_KEYWORDS || "").split(",");
+  const raw = args.length > 0 ? args : [process.env.HOT_KEYWORDS || ""];
 
   const keywords = raw
     .flatMap((entry) => entry.split(","))
@@ -123,6 +123,6 @@ process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 
 process.on("unhandledRejection", (error) => {
-  console.error("未处理的异常：", error);
+  console.error("未处理的 Promise 拒绝：", error);
   shutdown(1);
 });
