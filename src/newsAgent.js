@@ -68,7 +68,8 @@ const generateBriefing = async (keywords) => {
         const items = await fetchNewsForKeyword(keyword);
         return formatBriefing(keyword, items);
       } catch (error) {
-        return `- ${keyword}：获取失败 (${error.message})`;
+        const message = error instanceof Error ? error.message : String(error);
+        return `- ${keyword}：获取失败 (${message})`;
       }
     })
   );
@@ -96,15 +97,32 @@ if (keywords.length === 0) {
   process.exit(1);
 }
 
-runBriefing(keywords).catch((error) => {
-  console.error("生成简报失败：", error);
-});
+let timerId;
+const scheduleNext = () => {
+  timerId = setTimeout(() => {
+    runBriefing(keywords)
+      .catch((error) => {
+        console.error("生成简报失败：", error);
+      })
+      .finally(scheduleNext);
+  }, DEFAULT_INTERVAL_MS);
+};
 
-setInterval(() => {
-  runBriefing(keywords).catch((error) => {
+runBriefing(keywords)
+  .catch((error) => {
     console.error("生成简报失败：", error);
-  });
-}, DEFAULT_INTERVAL_MS);
+  })
+  .finally(scheduleNext);
+
+const shutdown = () => {
+  if (timerId) {
+    clearTimeout(timerId);
+  }
+  process.exit(0);
+};
+
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
 
 process.on("unhandledRejection", (error) => {
   console.error("未处理的异常：", error);
