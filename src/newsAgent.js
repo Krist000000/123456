@@ -3,11 +3,17 @@ const { XMLParser } = require("fast-xml-parser");
 const DEFAULT_INTERVAL_MS = 2 * 60 * 60 * 1000;
 const DEFAULT_KEYWORDS = ["中国房地产最新情况"];
 const MAX_ITEMS = 5;
-const parser = new XMLParser({ ignoreAttributes: false });
+const PARSER_OPTIONS = { ignoreAttributes: false };
+const parser = new XMLParser(PARSER_OPTIONS);
 
 const parseKeywords = () => {
   const args = process.argv.slice(2).filter(Boolean);
-  const raw = args.length > 0 ? args : [process.env.HOT_KEYWORDS || ""];
+  const raw =
+    args.length > 0
+      ? args
+      : process.env.HOT_KEYWORDS
+      ? [process.env.HOT_KEYWORDS]
+      : [];
 
   const keywords = raw
     .flatMap((entry) => entry.split(","))
