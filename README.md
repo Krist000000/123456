@@ -13,11 +13,11 @@ npm install
 ### 运行
 
 ```bash
-npm start -- 人工智能 经济
+npm start -- 中国房地产最新情况
 ```
 
-也可以通过环境变量提供热词（逗号分隔）：
+不传入参数时默认使用关键字“中国房地产最新情况”。也可以通过环境变量提供热词（逗号分隔）：
 
 ```bash
-HOT_KEYWORDS=人工智能,经济 npm start
+HOT_KEYWORDS=中国房地产最新情况 npm start
 ```

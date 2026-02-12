@@ -1,5 +1,5 @@
 {
-  "name": "123456",
+  "name": "hot-keyword-news-agent",
   "version": "1.0.0",
   "description": "News brief agent for hot keywords",
   "main": "src/newsAgent.js",

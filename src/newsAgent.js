@@ -1,6 +1,7 @@
 const { XMLParser } = require("fast-xml-parser");
 
 const DEFAULT_INTERVAL_MS = 2 * 60 * 60 * 1000;
+const DEFAULT_KEYWORDS = ["中国房地产最新情况"];
 const MAX_ITEMS = 5;
 const parser = new XMLParser({ ignoreAttributes: false });
 
@@ -8,10 +9,11 @@ const parseKeywords = () => {
   const args = process.argv.slice(2).filter(Boolean);
   const raw = args.length > 0 ? args : (process.env.HOT_KEYWORDS || "").split(",");
 
-  return raw
+  const keywords = raw
     .flatMap((entry) => entry.split(","))
     .map((entry) => entry.trim())
     .filter(Boolean);
+  return keywords.length > 0 ? keywords : DEFAULT_KEYWORDS;
 };
 
 const toArray = (value) => {
@@ -92,10 +94,6 @@ const runBriefing = async (keywords) => {
 };
 
 const keywords = parseKeywords();
-if (keywords.length === 0) {
-  console.error("请提供热词，例如：node src/newsAgent.js 人工智能 经济 或设置 HOT_KEYWORDS 环境变量");
-  process.exit(1);
-}
 
 let timerId;
 const scheduleNext = () => {
@@ -114,11 +112,11 @@ runBriefing(keywords)
   })
   .finally(scheduleNext);
 
-const shutdown = () => {
+const shutdown = (exitCode = 0) => {
   if (timerId) {
     clearTimeout(timerId);
   }
-  process.exit(0);
+  process.exit(exitCode);
 };
 
 process.on("SIGINT", shutdown);
@@ -126,4 +124,5 @@ process.on("SIGTERM", shutdown);
 
 process.on("unhandledRejection", (error) => {
   console.error("未处理的异常：", error);
+  shutdown(1);
 });
