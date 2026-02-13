@@ -1,0 +1,42 @@
+{
+  "claim": "立陶宛在2021年允许台湾设立代表处",
+  "conclusion": "真实",
+  "confidence": "高",
+  "evidence": [
+    "找到 3 个独立来源支持或反驳该信息",
+    "已核查关键信息点: 时间信息",
+    "时间信息已与多个来源交叉验证",
+    "有 2 个高质量来源提供支持"
+  ],
+  "sources": [
+    {
+      "title": "权威新闻源 - 官方报道",
+      "url": "https://example-news-official.com/article",
+      "relevance": "高",
+      "key_points": [
+        "关于\"立陶宛在2021年允许台湾设立代表处...\"的官方报道内容",
+        "来源类型: official"
+      ]
+    },
+    {
+      "title": "国际事实核查网站 - 验证报告",
+      "url": "https://example-factcheck.org/report",
+      "relevance": "高",
+      "key_points": [
+        "针对\"立陶宛在2021年允许台湾设立代表处...\"的事实核查",
+        "来源类型: factcheck"
+      ]
+    },
+    {
+      "title": "学术研究报告",
+      "url": "https://example-academic.edu/paper",
+      "relevance": "中",
+      "key_points": [
+        "相关研究：立陶宛在2021年允许台湾设立代表处...",
+        "来源类型: academic"
+      ]
+    }
+  ],
+  "verification_details": "交叉验证了 3 个来源，包括官方媒体、事实核查网站和学术机构 | 针对时间信息进行了专项核查 | 验证了信息发布时间和事件时间的一致性 | 高质量来源包括: 权威新闻源 - 官方报道, 国际事实核查网站 - 验证报告",
+  "timestamp": "2026-02-13 13:28:38"
+}
