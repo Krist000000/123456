@@ -440,20 +440,33 @@
     </div>
 
     <script>
+        // 配置常量
+        const MOCK_API_DELAY_MS = 3000; // 模拟API调用延迟时间（毫秒）
+
         // 模拟API调用的函数（实际应用中应该调用真实的后端API）
+        // 参数 information 将在实际实现中用于搜索和验证
         async function callVerificationAPI(information) {
             // 这里应该调用实际的API，该API会：
             // 1. 使用搜索引擎API搜索相关信息
             // 2. 从权威网站获取数据
             // 3. 使用AI进行信息分析和比对
             // 4. 返回验证结果
+            // 
+            // 实际实现示例：
+            // const response = await fetch('/api/verify', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ information })
+            // });
+            // return await response.json();
             
             // 此处为演示目的，使用模拟数据
+            // 注意：下方的URLs为示例占位符，实际应用中将替换为真实的权威来源链接
             return new Promise((resolve) => {
                 setTimeout(() => {
                     // 模拟返回结果
                     const demoResult = {
-                        status: 'partial', // 'true', 'false', 'partial'
+                        status: 'partial', // 可能的值: 'true', 'false', 'partial'
                         conclusion: '基于当前可查的公开信息，该信息的部分内容可以得到证实，但仍有部分细节需要进一步核查。',
                         details: [
                             '经过多个权威来源的交叉比对，发现该信息的主要论点与公开报道基本一致。',
@@ -463,24 +476,24 @@
                         sources: [
                             {
                                 title: '权威新闻网站报道',
-                                url: 'https://example.com/news/article1',
+                                url: 'https://example.com/news/article1', // 占位符URL，实际使用时替换为真实来源
                                 reliability: '高'
                             },
                             {
                                 title: '政府官方公告',
-                                url: 'https://example.gov/announcement',
+                                url: 'https://example.gov/announcement', // 占位符URL，实际使用时替换为真实来源
                                 reliability: '高'
                             },
                             {
                                 title: '学术研究论文',
-                                url: 'https://academic.example.com/paper/123',
+                                url: 'https://academic.example.com/paper/123', // 占位符URL，实际使用时替换为真实来源
                                 reliability: '高'
                             }
                         ],
                         verificationDate: new Date().toLocaleDateString('zh-CN')
                     };
                     resolve(demoResult);
-                }, 3000); // 模拟3秒的API调用延迟
+                }, MOCK_API_DELAY_MS);
             });
         }
 
