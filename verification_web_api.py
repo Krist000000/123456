@@ -561,6 +561,8 @@ def health():
 
 
 if __name__ == '__main__':
+    import os
+    
     print("=" * 60)
     print("启动信息验证智能体 Web 服务")
     print("=" * 60)
@@ -570,4 +572,14 @@ if __name__ == '__main__':
     print("=" * 60)
     print()
     
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # 只在开发环境启用debug模式，生产环境禁用
+    # 通过环境变量控制
+    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    if debug_mode:
+        print("⚠️  警告: Debug模式已启用，仅用于开发环境")
+        print("    生产环境请设置环境变量: FLASK_DEBUG=False")
+        print("=" * 60)
+        print()
+    
+    app.run(host='0.0.0.0', port=5000, debug=debug_mode)
