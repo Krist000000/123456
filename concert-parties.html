@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一致行动人认定法律分析报告 - 罗曼股份案深度研究">
+    <title>一致行动人认定法律分析报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+            --code-bg: #f4f4f4;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .nav-toggle:hover {
+            background: var(--primary-color);
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 25px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        nav ul ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        nav ul ul li a {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: var(--secondary-color);
+        }
+
+        h3 {
+            font-size: 1.3em;
+        }
+
+        h4 {
+            font-size: 1.1em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea22, #764ba222);
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background: #fef9e7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success-box {
+            background: #eafaf1;
+            border-left: 4px solid #27ae60;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .danger-box {
+            background: #fdedec;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e8f4fd;
+        }
+
+        .law-cite {
+            font-style: italic;
+            color: #555;
+            background: var(--code-bg);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            border-left: 3px solid #999;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        footer p {
+            text-align: center;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary-color);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: background 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                padding: 0;
+            }
+
+            nav > h2, nav > ul {
+                padding: 15px 20px;
+            }
+
+            nav.collapsed > ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>一致行动人认定法律分析报告</h1>
+            <p>——以罗曼股份案为中心的实务探讨</p>
+            <div class="meta">
+                <span>法律研究报告</span> ·
+                <span>撰写日期：2026年2月</span> ·
+                <span>依据：《上市公司收购管理办法》第八十二条</span>
+            </div>
+        </header>
+
+        <button class="nav-toggle" onclick="toggleNav()">☰ 目录导航</button>
+
+        <nav id="nav">
+            <h2>目录</h2>
+            <ul>
+                <li><a href="#part1">第一部分：法律定义与构成要素</a>
+                    <ul>
+                        <li><a href="#part1-1">一、法定定义</a></li>
+                        <li><a href="#part1-2">二、关键要素分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part2">第二部分：罗曼股份案分析</a>
+                    <ul>
+                        <li><a href="#part2-1">一、案件背景</a></li>
+                        <li><a href="#part2-2">二、法律争议焦点</a></li>
+                        <li><a href="#part2-3">三、法律评析</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part3">第三部分：实务推定标准</a>
+                    <ul>
+                        <li><a href="#part3-1">一、推定情形概述</a></li>
+                        <li><a href="#part3-2">二、各情形详解</a></li>
+                    </ul>
+                </li>
+                <li><a href="#part4">第四部分：结论与建议</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="part1">
+                <h1>第一部分：法律定义与构成要素</h1>
+
+                <h2 id="part1-1">一、法定定义</h2>
+
+                <p>在关联交易实务中，"一致行动人"的认定往往至关重要。根据《上市公司收购管理办法》第八十二条的规定：</p>
+
+                <div class="law-cite">
+                    投资者通过协议、其他安排，与其他投资者共同扩大其所能够支配的一个上市公司股份表决权数量的行为或者事实，构成一致行动人。
+                </div>
+
+                <p>该条文确立了我国证券法律体系下"一致行动人"的核心定义，是监管机构认定一致行动人的法律依据。</p>
+
+                <h2 id="part1-2">二、关键要素分析</h2>
+
+                <p>依据上述定义，一致行动人的认定须同时满足两个关键要素，缺一不可：</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>要素</th>
+                            <th>具体内容</th>
+                            <th>法律含义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>协议、其他安排</strong>（行动基础）</td>
+                            <td>明示的书面协议，或默示的、事实上的一致行动安排</td>
+                            <td>一致行动的形成基础，涵盖正式与非正式的协调机制</td>
+                        </tr>
+                        <tr>
+                            <td><strong>共同扩大</strong>（行动目的）</td>
+                            <td>共同扩大对上市公司股份表决权的支配数量</td>
+                            <td>一致行动的目的在于扩大对股份表决权的影响力</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <h3>要素解析</h3>
+                    <ul>
+                        <li><strong>关于"协议、其他安排"：</strong>该要素表明一致行动的形成基础既可以是明确的书面协议，亦可以是默示的、事实上的一致行动。法律并不要求当事人之间必须存在正式的书面文件，非正式的沟通、协调甚至行为上的默契均可能构成"其他安排"。</li>
+                        <li><strong>关于"共同扩大"：</strong>该要素表明一致行动的目的在于扩大对股份表决权的影响力。单纯的共同持股并不足以构成一致行动，须有主动协调、共同影响表决权行使的意图与行为。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="part2">
+                <h1>第二部分：罗曼股份案分析</h1>
+
+                <h2 id="part2-1">一、案件背景</h2>
+
+                <p>罗曼股份案是近年来关联交易实务中颇具代表性的案例。案件涉及武桐科技与上海八荒两个主体，两者均属于武创集团体系，存在共同的控制关系。</p>
+
+                <div class="info-box">
+                    <h3>主要当事方</h3>
+                    <ul>
+                        <li><strong>武桐科技：</strong>武创集团旗下子公司，持有罗曼股份一定比例的股权</li>
+                        <li><strong>上海八荒：</strong>武创集团旗下另一子公司，亦持有罗曼股份股权</li>
+                        <li><strong>武创集团：</strong>武桐科技与上海八荒的共同控制方</li>
+                        <li><strong>罗曼股份：</strong>目标上市公司</li>
+                    </ul>
+                </div>
+
+                <h2 id="part2-2">二、法律争议焦点</h2>
+
+                <p>本案的核心争议在于：<strong>武桐科技与上海八荒同属武创集团体系的共同控制关系，是否足以认定两者构成一致行动人？</strong></p>
+
+                <div class="warning-box">
+                    <h3>争议焦点</h3>
+                    <p>一方观点认为，两者同属武创集团，必然在决策上协调一致，应认定为一致行动人。</p>
+                    <p>另一方观点认为，仅凭共同控制关系不能自动推定一致行动，须有具体针对罗曼股份相关事项的一致行动意向与安排。</p>
+                </div>
+
+                <h2 id="part2-3">三、法律评析</h2>
+
+                <p>从法律的严格角度审视，此种共同控制关系是否足以认定两者构成一致行动人，需进一步核实以下问题：</p>
+
+                <ol>
+                    <li>是否存在明示的协议或安排，使两者在与罗曼股份相关事项上保持一致立场？</li>
+                    <li>是否存在默示的协调机制，形成事实上的一致行动？</li>
+                    <li>两者的股权行为是否确实产生了共同扩大表决权影响力的效果？</li>
+                </ol>
+
+                <div class="danger-box">
+                    <h3>重要结论</h3>
+                    <p><strong>仅因同属一个集团，并不必然构成一致行动人。</strong>尚需有关于具体事项的一致行动意向——即针对罗曼股份相关事项，两者之间须存在明示或默示的协议，使两者保持一致立场，方可认定为一致行动人。</p>
+                </div>
+            </section>
+
+            <section id="part3">
+                <h1>第三部分：实务推定标准</h1>
+
+                <h2 id="part3-1">一、推定情形概述</h2>
+
+                <p>尽管法律上不能仅凭共同控制关系推定一致行动，但在实务操作中，如两个主体至少符合以下情形之一，则可推定存在一致行动的可能：</p>
+
+                <div class="success-box">
+                    <h3>实务推定的四大情形</h3>
+                    <ol>
+                        <li>曾在其他交易中表现出一致的表决立场</li>
+                        <li>存在共同的受益人或实际控制人</li>
+                        <li>在本笔交易中存在紧密的利益绑定（例如收益或责任的共担）</li>
+                        <li>存在事实上的沟通和协调机制</li>
+                    </ol>
+                </div>
+
+                <h2 id="part3-2">二、各情形详解</h2>
+
+                <h3>情形一：历史表决立场一致</h3>
+                <p>若两个主体曾在其他交易中表现出一致的表决立场，即在过往的股东大会投票、关联交易决策等场合均保持步调统一，则可推定其存在协调机制，进而推定其在本次交易中亦可能构成一致行动人。</p>
+
+                <h3>情形二：共同受益人或实际控制人</h3>
+                <p>若两个主体存在共同的受益人或实际控制人——如罗曼股份案中武桐科技与上海八荒均受武创集团控制——则可推定其行动可能受到共同控制方的协调与指引。然而，如前所述，此种情形需结合其他证据综合判断，单独不足以认定一致行动。</p>
+
+                <h3>情形三：紧密的利益绑定</h3>
+                <p>若在本笔交易中，两个主体之间存在紧密的利益绑定，例如：</p>
+                <ul>
+                    <li>收益共担：双方共同分享交易带来的经济利益</li>
+                    <li>责任共担：双方对交易的法律责任共同承担</li>
+                    <li>对赌安排：双方共同与目标公司签订对赌协议</li>
+                    <li>联合融资：双方共同为本次交易筹集资金</li>
+                </ul>
+                <p>则可推定其存在利益一致的基础，进而推定一致行动的可能性。</p>
+
+                <h3>情形四：事实上的沟通和协调机制</h3>
+                <p>若存在事实上的沟通和协调机制，例如：</p>
+                <ul>
+                    <li>双方人员存在往来沟通的记录（邮件、会议纪要等）</li>
+                    <li>双方存在共同的董事、高管或代理人</li>
+                    <li>双方在信息披露上存在协调的迹象</li>
+                    <li>双方的股权变动在时间上高度一致</li>
+                </ul>
+                <p>则可认定存在事实上的协调机制，构成一致行动的有力证据。</p>
+
+                <div class="highlight-box">
+                    <h3>综合判断原则</h3>
+                    <p>上述四种情形并非相互排斥，在实务中应综合考量、整体判断。单一情形可作为推定依据，多种情形并存则大幅提升认定一致行动人的可能性。监管机构在认定时通常采取"综合认定、整体判断"的原则，而非机械套用单一标准。</p>
+                </div>
+            </section>
+
+            <section id="part4">
+                <h1>第四部分：结论与建议</h1>
+
+                <h2>核心结论</h2>
+
+                <div class="highlight-box">
+                    <h3>1. 法律定义的核心要素</h3>
+                    <p>《上市公司收购管理办法》第八十二条规定的"一致行动人"，须同时具备"协议或其他安排"与"共同扩大表决权"两个要素，缺一不可。</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>2. 共同控制关系不等于一致行动</h3>
+                    <p>武桐科技与上海八荒同属武创集团体系的事实，是推定一致行动的重要参考，但不能自动得出一致行动人的结论。需结合其他情形综合判断。</p>
+                </div>
+
+                <div class="success-box">
+                    <h3>3. 实务推定的四大标准</h3>
+                    <p>在实务中，历史表决立场一致、共同受益人或实际控制人、紧密的利益绑定、事实上的沟通和协调机制，是推定一致行动的四大重要情形。</p>
+                </div>
+
+                <h2>实务建议</h2>
+
+                <h3>对监管机构</h3>
+                <ol>
+                    <li><strong>综合认定：</strong>在认定一致行动人时，应综合考量多种情形，避免单一标准的机械适用。</li>
+                    <li><strong>注重实质：</strong>应重视实质上的协调行为，而非仅关注形式上的协议文件。</li>
+                    <li><strong>举证分配：</strong>在认定存在推定情形后，可适当转移举证责任，由当事方证明不存在一致行动安排。</li>
+                </ol>
+
+                <h3>对上市公司参与方</h3>
+                <ol>
+                    <li><strong>信息披露合规：</strong>存在共同控制关系的多方参与者，应主动审查是否构成一致行动人，并依法履行信息披露义务。</li>
+                    <li><strong>留存证据：</strong>如确实不存在一致行动安排，应注意保留相关证据（如独立决策记录），以备监管查询。</li>
+                    <li><strong>专业咨询：</strong>在涉及复杂关联关系的交易中，宜事先寻求专业法律意见，明确一致行动人的认定边界。</li>
+                </ol>
+
+                <hr style="margin: 40px 0;">
+
+                <div class="info-box">
+                    <p>一致行动人的认定在证券监管实务中具有重要意义，直接关系到信息披露义务、要约收购触发条件及关联交易规范等核心监管要求。随着监管实践的不断积累，相关认定标准有望进一步细化和明确，为市场参与者提供更清晰的合规指引。</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>报告完</strong></p>
+            <p>依据：《上市公司收购管理办法》第八十二条</p>
+            <p>撰写日期：2026年2月</p>
+            <p style="margin-top: 20px; opacity: 0.8;">本报告仅供参考，不构成正式法律意见</p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // 目录导航折叠功能
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('collapsed');
+        }
+
+        // 返回顶部按钮
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
