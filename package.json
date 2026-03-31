@@ -1,0 +1,25 @@
+{
+  "name": "hot-keyword-news-agent",
+  "version": "1.0.0",
+  "description": "News brief agent for hot keywords",
+  "main": "src/newsAgent.js",
+  "scripts": {
+    "start": "node src/newsAgent.js",
+    "test": "echo \"No tests configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krist000000/123456.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Krist000000/123456/issues"
+  },
+  "homepage": "https://github.com/Krist000000/123456#readme",
+  "dependencies": {
+    "fast-xml-parser": "^5.3.5"
+  }
+}
